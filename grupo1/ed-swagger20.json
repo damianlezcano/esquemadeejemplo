@@ -1,0 +1,74 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Edenor API v2",
+        "version": "",
+        "description": "¡Bienvenido a la API de Edenor Digital! En esta documentación encontrará\ntoda la información necesaria para consumir los recursos de la API versión 2."
+    },
+    "paths": {
+        "/token": {
+            "post": {
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "headers": {},
+                        "examples": {
+                            "application/json": {
+                                "access_token": "lNcNzsCyHJCVBv7vrmJTk4aeKpx1ABSU83rtsdf42H",
+                                "expires_in": 86399
+                            }
+                        }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "headers": {},
+                        "examples": {
+                            "application/json": {
+                                "error": "Credenciales inválidas"
+                            }
+                        }
+                    }
+                },
+                "summary": "a1. Generar",
+                "operationId": "a1. Generar",
+                "description": "Intercambio de credenciales de la aplicación Edenor Digital\npor un `access_token` que tiene una determinada expiración expresada\nen segundos: `expires_in`. Este token será requerido para autorizar\ntodos los requests que se hagan desde la plataforma a los recursos de\nla API.",
+                "tags": [
+                    "a. Autenticación de Aplicación"
+                ],
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "schema": {
+                            "type": "object",
+                            "properties": {
+                                "app-id": {
+                                    "type": "string"
+                                },
+                                "password": {
+                                    "type": "string"
+                                }
+                            },
+                            "example": {
+                                "app-id": "edenor-digital",
+                                "password": "XfDtgh4j5hje25jtg9g95jgDFG"
+                            }
+                        }
+                    }
+                ],
+                "produces": [
+                    "application/json"
+                ]
+            }
+        }
+    },
+    "definitions": {
+        "Sesiones": {}
+    },
+    "securityDefinitions": {},
+    "tags": [
+        {
+            "name": "a. Autenticación de Aplicación"
+        }
+    ]
+}

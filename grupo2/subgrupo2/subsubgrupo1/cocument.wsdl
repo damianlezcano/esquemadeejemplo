@@ -1,0 +1,107 @@
+<definitions targetNamespace="http://www.informatica.com/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:infa="http://www.informatica.com/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:n="http://www.example.org/changedDocument/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:nil="true">
+  <types>
+    <xsd:schema targetNamespace="http://www.informatica.com/" xmlns="http://www.informatica.com/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:infa="http://www.informatica.com/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:n="http://www.example.org/changedDocument/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <xsd:complexType name="SecurityHeader">
+        <xsd:sequence>
+          <xsd:element name="UsernameToken">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="Username" type="xsd:string"/>
+                <xsd:element name="Password" type="xsd:string"/>
+              </xsd:sequence>
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="Security" type="infa:SecurityHeader"/>
+    </xsd:schema>
+    <xsd:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.example.org/changedDocument/" xmlns="http://www.example.org/changedDocument/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:infa="http://www.informatica.com/" xmlns:infatype="http://www.informatica.com/types/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:n="http://www.example.org/changedDocument/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+      <xsd:import namespace="http://schemas.xmlsoap.org/wsdl/http/"/>
+      <xsd:element name="changedDocumentResponse">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="changedDocumentResponse" type="xsd:string"/>
+            <xsd:element name="changedDocumentDescResponse" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="changedDocument">
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="documentId" type="xsd:string"/>
+            <xsd:element name="docDangerLevelChanged" type="xsd:string"/>
+            <xsd:element name="docDangerLevelDescriptionChanged" type="xsd:string"/>
+            <xsd:element name="docGroupedChanged" type="xsd:string"/>
+            <xsd:element name="docTypeChanged" type="xsd:string"/>
+            <xsd:element name="docAffectedClientCountChanged" type="xsd:string"/>
+            <xsd:element name="epaObjectId" type="xsd:string"/>
+            <xsd:element name="epaEntity" type="xsd:string"/>
+            <xsd:element name="epaX" type="xsd:string"/>
+            <xsd:element name="epaY" type="xsd:string"/>
+            <xsd:element name="epaStreetId" type="xsd:string"/>
+            <xsd:element name="epaStreetName" type="xsd:string"/>
+            <xsd:element name="epaStreetNumber" type="xsd:string"/>
+            <xsd:element name="epaLargeAreaId" type="xsd:string"/>
+            <xsd:element name="epaLargeAreaName" type="xsd:string"/>
+            <xsd:element name="epaMediumAreaId" type="xsd:string"/>
+            <xsd:element name="epaMediumAreaName" type="xsd:string"/>
+            <xsd:element name="epaSmallAreaId" type="xsd:string"/>
+            <xsd:element name="epaSmallAreaName" type="xsd:string"/>
+            <xsd:element name="docWithSupply" type="xsd:string"/>
+            <xsd:element name="countReiteration" type="xsd:string"/>
+            <xsd:element name="countClaims" type="xsd:string"/>
+            <xsd:element name="enreClaimCount" type="xsd:string"/>
+            <xsd:element name="docSensitivityLevel" type="xsd:string"/>
+            <xsd:element name="documentFare" type="xsd:string"/>
+            <xsd:element name="claimReasonDescription" type="xsd:string"/>
+            <xsd:element name="claimSubreasonDescription" type="xsd:string"/>
+            <xsd:element name="countOpenClaims" type="xsd:string"/>
+            <xsd:element name="clientRelation" type="xsd:string"/>
+            <xsd:element name="documentName" type="xsd:string"/>
+            <xsd:element name="epaCaption" type="xsd:string"/>
+            <xsd:element name="dueDate" type="xsd:date"/>
+            <xsd:element name="documentCreationDate" type="xsd:date" xsi:nil="true"/>
+            <xsd:element name="maxHazardClaimCreationTime" type="xsd:date" xsi:nil="true"/>
+            <xsd:element name="hazardExpirationTime" type="xsd:date" xsi:nil="true"/>
+            <xsd:element name="docName" type="xsd:string"/>
+            <xsd:element name="epaDescription" type="xsd:string"/>
+            <xsd:element name="dangerCount" type="xsd:string"/>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+    </xsd:schema>
+  </types>
+  <message name="changedDocumentResponse">
+    <part element="n:changedDocumentResponse" name="parameters"/>
+  </message>
+  <message name="SecurityHeader">
+    <part element="infa:Security" name="Security"/>
+  </message>
+  <message name="changedDocumentRequest">
+    <part element="n:changedDocument" name="parameters"/>
+  </message>
+  <portType name="changedDocumentPort">
+    <operation name="changedDocumentOperation">
+      <input message="infa:changedDocumentRequest"/>
+      <output message="infa:changedDocumentResponse"/>
+    </operation>
+  </portType>
+  <binding name="changedDocumentBinding" type="infa:changedDocumentPort">
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="changedDocumentOperation">
+      <soap:operation soapAction="" style="document"/>
+      <input>
+        <soap:body use="literal"/>
+        <soap:header message="infa:SecurityHeader" part="Security" use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="changedDocument">
+    <port binding="infa:changedDocumentBinding" name="changedDocumentPort">
+      <soap:address location="http://changed-document-esb-uat.noprod-apps.pro.edenor/service/changedDocument"/>
+    </port>
+  </service>
+</definitions>

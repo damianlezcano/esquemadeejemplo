@@ -1,0 +1,155 @@
+<definitions targetNamespace="http://www.informatica.com/" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:infa="http://www.informatica.com/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:n="http://www.example.org/sendToDispatcher/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+	<types>
+		<xsd:schema attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="http://www.example.org/sendToDispatcher/" xmlns="http://www.example.org/sendToDispatcher/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:infa="http://www.informatica.com/" xmlns:infatype="http://www.informatica.com/types/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:n="http://www.example.org/sendToDispatcher/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+			<xsd:import namespace="http://schemas.xmlsoap.org/wsdl/http/"/>
+			<xsd:complexType name="docClaimsToDispatcherType">
+				<xsd:sequence maxOccurs="1" minOccurs="0">
+					<xsd:element name="claimId" type="xsd:string"/>
+					<xsd:element name="claimClientName" type="xsd:string"/>
+					<xsd:element name="claimReiterated" type="xsd:string"/>
+					<xsd:element name="claimVIP" type="xsd:string"/>
+					<xsd:element name="claimHasHazard" type="xsd:string"/>
+					<xsd:element name="claimENRE" type="xsd:string"/>
+					<xsd:element name="claimNotes" type="xsd:string"/>
+					<xsd:element name="claimStreetId" type="xsd:string"/>
+					<xsd:element name="claimStreetName" type="xsd:string"/>
+					<xsd:element name="claimStreetNumber" type="xsd:string"/>
+					<xsd:element name="claimStreetOther" type="xsd:string"/>
+					<xsd:element name="claimNearStreetOne" type="xsd:string"/>
+					<xsd:element name="claimNearStreetTwo" type="xsd:string"/>
+					<xsd:element name="claimLargeAreaId" type="xsd:string"/>
+					<xsd:element name="claimLargeAreaName" type="xsd:string"/>
+					<xsd:element name="claimMediumAreaId" type="xsd:string"/>
+					<xsd:element name="claimMediumAreaName" type="xsd:string"/>
+					<xsd:element name="claimSmallAreaId" type="xsd:string"/>
+					<xsd:element name="claimSmallAreaName" type="xsd:string"/>
+					<xsd:element name="claimPhone" type="xsd:string"/>
+					<xsd:element name="claimMeterNumber" type="xsd:string"/>
+					<xsd:element name="claimX" type="xsd:string"/>
+					<xsd:element name="claimY" type="xsd:string"/>
+					<xsd:element name="claimReasonDescription" type="xsd:string"/>
+					<xsd:element name="claimSubreasonDescription" type="xsd:string"/>
+				</xsd:sequence>
+			</xsd:complexType>
+			<xsd:element name="sendToDispatcherResponse">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="sendToDispatcherResponse" type="xsd:string"/>
+						<xsd:element name="sendToDispatcherDescResponse" type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+			<xsd:element name="sendToDispatcher">
+				<xsd:complexType>
+					<xsd:sequence>
+						<xsd:element name="documentId" type="xsd:string"/>
+						<xsd:element name="documentName" type="xsd:string"/>
+						<xsd:element name="documentType" type="xsd:string"/>
+						<xsd:element name="documentTypeName" type="xsd:string"/>
+						<xsd:element name="affectedCustomersCount" type="xsd:string"/>
+						<xsd:element name="openClaimsCount" type="xsd:string"/>
+						<xsd:element name="claimReiterationsCount" type="xsd:string"/>
+						<xsd:element name="crews" type="xsd:string"/>
+						<xsd:element name="EPAobjectId" type="xsd:string"/>
+						<xsd:element name="EPAEntity" type="xsd:string"/>
+						<xsd:element name="EPACaption" type="xsd:string"/>
+						<xsd:element name="docX" type="xsd:string"/>
+						<xsd:element name="docY" type="xsd:string"/>
+						<xsd:element name="docStreetId" type="xsd:string"/>
+						<xsd:element name="docStreetName" type="xsd:string"/>
+						<xsd:element name="docStreetNumber" type="xsd:string"/>
+						<xsd:element name="docStreetOther" type="xsd:string"/>
+						<xsd:element name="docNearStreetOne" type="xsd:string"/>
+						<xsd:element name="docNearStreetTwo" type="xsd:string"/>
+						<xsd:element name="docLargeAreaId" type="xsd:string"/>
+						<xsd:element name="docLargeAreaName" type="xsd:string"/>
+						<xsd:element name="docMediumAreaId" type="xsd:string"/>
+						<xsd:element name="docMediumAreaName" type="xsd:string"/>
+						<xsd:element name="docSmallAreaId" type="xsd:string"/>
+						<xsd:element name="docSmallAreaName" type="xsd:string"/>
+						<xsd:element name="docLatitude" type="xsd:string"/>
+						<xsd:element name="docLongitude" type="xsd:string"/>
+						<xsd:element name="docElectricalChain" type="xsd:string"/>
+						<xsd:element name="docNotes" type="xsd:string"/>
+						<xsd:element name="docOutageTime" type="xsd:string"/>
+						<xsd:element name="dueDate" type="xsd:string"/>
+						<xsd:element name="docReiteratedClaim" type="xsd:string"/>
+						<xsd:element name="dangerCount" type="xsd:string"/>
+						<xsd:element name="higherDangerLevel" type="xsd:string"/>
+						<xsd:element name="higherDangerDescription" type="xsd:string"/>
+						<xsd:element name="isGroupedDocument" type="xsd:string"/>
+						<xsd:element name="ctEpaStreetId" type="xsd:string"/>
+						<xsd:element name="ctEpaStreetName" type="xsd:string"/>
+						<xsd:element name="ctEpaStreetNumber" type="xsd:string"/>
+						<xsd:element name="ctEpaLargeAreaIdEPA" type="xsd:string"/>
+						<xsd:element name="ctEpaLargeAreaName" type="xsd:string"/>
+						<xsd:element name="ctEpaMediumAreaId" type="xsd:string"/>
+						<xsd:element name="ctEpaMediumAreaName" type="xsd:string"/>
+						<xsd:element name="ctEpaSmallAreaId" type="xsd:string"/>
+						<xsd:element name="ctEpaSmallAreaName" type="xsd:string"/>
+						<xsd:element name="ctEpa" type="xsd:string"/>
+						<xsd:element name="ctEpaX" type="xsd:string"/>
+						<xsd:element name="ctEpaY" type="xsd:string"/>
+						<xsd:element name="installationRequestNumber" type="xsd:string"/>
+						<xsd:element name="hasSVPClaim" type="xsd:string"/>
+						<xsd:element name="withoutServiceClaimCountOriginEnre" type="xsd:string"/>
+						<xsd:element name="hasAffectedSensibleClients" type="xsd:string"/>
+						<xsd:element name="higherSensibleClientLevel" type="xsd:string"/>
+						<xsd:element name="higherSensibleClientDescription" type="xsd:string"/>
+						<xsd:element name="higherSensibleClientStreetId" type="xsd:string"/>
+						<xsd:element name="higherSensibleClientStreetName" type="xsd:string"/>
+						<xsd:element name="higherSensibleClientStreetNumber" type="xsd:string"/>
+						<xsd:element name="higherSensibleClientLargeAreaId" type="xsd:string"/>
+						<xsd:element name="higherSensibleClientLargeAreaName" type="xsd:string"/>
+						<xsd:element name="higherSensibleClientMediumAreaId" type="xsd:string"/>
+						<xsd:element name="higherSensibleClientMediumAreaName" type="xsd:string"/>
+						<xsd:element name="higherSensibleClientSmallAreaId" type="xsd:string"/>
+						<xsd:element name="higherSensibleClientSmallAreaName" type="xsd:string"/>
+						<xsd:element name="higherSensibleClientPhone" type="xsd:string"/>
+						<xsd:element name="docWithSupply" type="xsd:string"/>
+						<xsd:element name="docClaimsToDispatcher" type="docClaimsToDispatcherType"/>
+						<xsd:element name="docFullAddress" type="xsd:string"/>
+						<xsd:element name="dispatchId" type="xsd:string"/>
+						<xsd:element name="ownerGroup" type="xsd:string"/>
+						<xsd:element name="mapi" type="xsd:string"/>
+						<xsd:element name="documentFare" type="xsd:string"/>
+						<xsd:element name="clientRelation" type="xsd:string"/>
+						<xsd:element name="maxHazardClaimCreationTime" type="xsd:string"/>
+						<xsd:element name="hazardExpirationTime" type="xsd:string"/>
+						<xsd:element name="docCreationTime" type="xsd:string"/>
+						<xsd:element name="higherSensibleClientActivity" type="xsd:string"/>
+					</xsd:sequence>
+				</xsd:complexType>
+			</xsd:element>
+		</xsd:schema>
+	</types>
+	<message name="sendToDispatcherResponse">
+		<part element="n:sendToDispatcherResponse" name="parameters"/>
+	</message>
+	<message name="sendToDispatcherRequest">
+		<part element="n:sendToDispatcher" name="parameters"/>
+	</message>
+	<portType name="sendToDispatcherPort">
+		<operation name="sendToDispatcherOperation">
+			<input message="infa:sendToDispatcherRequest"/>
+			<output message="infa:sendToDispatcherResponse"/>
+		</operation>
+	</portType>
+	<binding name="sendToDispatcherBinding" type="infa:sendToDispatcherPort">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<operation name="sendToDispatcherOperation">
+			<soap:operation soapAction="" style="document"/>
+			<input>
+				<soap:body use="literal"/>
+			</input>
+			<output>
+				<soap:body use="literal"/>
+			</output>
+		</operation>
+	</binding>
+	<service name="sendToDispatcher">
+		<port binding="infa:sendToDispatcherBinding" name="sendToDispatcherPort">
+			<soap:address location="http://send-to-dispatcher-esb-uat.noprod-apps.pro.edenor/service/sendToDispatcher"/>
+		</port>
+	</service>
+</definitions>

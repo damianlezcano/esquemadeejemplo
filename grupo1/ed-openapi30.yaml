@@ -1,0 +1,66 @@
+openapi: 3.0.0
+x-origin:
+  - url: http://localhost:8480/edenor-digital.json
+    format: swagger
+    version: "2.0"
+    converter:
+      url: https://github.com/mermade/oas-kit
+      version: 7.0.8
+info:
+  title: Edenor API v2
+  version: ""
+  description: >-
+    ¡Bienvenido a la API de Edenor Digital! En esta documentación encontrará
+
+    toda la información necesaria para consumir los recursos de la API versión 2.
+paths:
+  /token:
+    post:
+      responses:
+        "200":
+          description: OK
+          headers: {}
+          content:
+            application/json:
+              examples:
+                response:
+                  value:
+                    access_token: lNcNzsCyHJCVBv7vrmJTk4aeKpx1ABSU83rtsdf42H
+                    expires_in: 86399
+        "401":
+          description: Unauthorized
+          headers: {}
+          content:
+            application/json:
+              examples:
+                response:
+                  value:
+                    error: Credenciales inválidas
+      summary: a1. Generar
+      operationId: a1. Generar
+      description: |-
+        Intercambio de credenciales de la aplicación Edenor Digital
+        por un `access_token` que tiene una determinada expiración expresada
+        en segundos: `expires_in`. Este token será requerido para autorizar
+        todos los requests que se hagan desde la plataforma a los recursos de
+        la API.
+      tags:
+        - a. Autenticación de Aplicación
+      requestBody:
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                app-id:
+                  type: string
+                password:
+                  type: string
+              example:
+                app-id: edenor-digital
+                password: XfDtgh4j5hje25jtg9g95jgDFG
+tags:
+  - name: a. Autenticación de Aplicación
+components:
+  schemas:
+    Sesiones: {}

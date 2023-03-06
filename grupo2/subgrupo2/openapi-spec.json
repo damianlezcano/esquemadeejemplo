@@ -1,0 +1,31 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "edenor-api",
+        "version": "1.0.0",
+        "description": "api edenor digital"
+    },
+    "paths": {
+        "/registrar": {
+            "description": "registro de actividades",
+            "get": {
+                "responses": {
+                    "200": {
+                        "description": "respueta esperada"
+                    }
+                },
+                "summary": "summary",
+                "description": "descripcion"
+            },
+            "delete": {
+                "responses": {
+                    "200": {
+                        "description": "registro borrado"
+                    }
+                },
+                "summary": "borro registro",
+                "description": "borro registro "
+            }
+        }
+    }
+}

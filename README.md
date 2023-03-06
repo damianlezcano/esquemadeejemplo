@@ -1,1 +1,2 @@
-# esquemadeejemplo
+# apicatalogsexamples
+Ejemplo de estructura de directorio
